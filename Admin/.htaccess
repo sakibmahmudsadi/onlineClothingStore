@@ -1,0 +1,5 @@
+Options -Indexes
+DirectoryIndex view/login.html
+<FilesMatch "\.sql$|\.ini$|\.log$">
+    Require all denied
+</FilesMatch>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase History</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+</head>
+
+<body>
+    <nav class="nav"><strong>G7CS Admin</strong>
+        <div><a href="dashboard.html">Dashboard</a><a href="products.html">Products</a><a
+                href="users.html">Customers</a><a href="orders.html">Orders</a></div>
+    </nav>
+    <main class="container">
+        <h1>All Purchase History</h1>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>Customer</th>
+                        <th>Email</th>
+                        <th>Product</th>
+                        <th>Qty</th>
+                        <th>Unit Price</th>
+                        <th>Item Total</th>
+                        <th>Order Total</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="historyRows"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="../JS/history.js"></script>
+</body>
+
+</html>

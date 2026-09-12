@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+</head>
+
+<body>
+    <nav class="nav"><strong>G7CS Admin</strong>
+        <div><a href="products.html">Products</a><a href="dashboard.html">Dashboard</a></div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Edit Product</h1>
+            <form id="productForm" enctype="multipart/form-data"><input type="hidden" name="id" id="id">
+                <div class="grid2"><label>Name<input name="name" id="name" maxlength="100"
+                            required></label><label>Price<input name="price" id="price" type="number" min="0.01"
+                            step="0.01" required></label><label class="full">Description<textarea name="description"
+                            id="description" maxlength="1000" required></textarea></label><label class="full">Size
+                        Chart<textarea name="size_chart" id="size_chart"></textarea></label><label>Stock<input
+                            name="stock" id="stock" type="number" min="0" step="1" required></label><label>Gender<select
+                            name="gender" id="gender" required>
+                            <option value="">Select</option>
+                            <option>Men</option>
+                            <option>Women</option>
+                        </select></label><label>Category<select name="category" id="category" required>
+                            <option value="">Select</option>
+                        </select></label><label>Replace Image<input name="image" type="file"
+                            accept=".jpg,.jpeg,.png,image/jpeg,image/png"><small>Leave empty to keep current
+                            image.</small></label></div>
+                <p id="currentImage"></p><button type="submit">Update Product</button>
+                <p id="message" class="message"></p>
+            </form>
+        </div>
+    </main>
+    <script src="../JS/product-form.js"></script>
+</body>
+
+</html>

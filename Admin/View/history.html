@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Purchase History</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+</head>
+
+<body data-admin-page>
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>G7CS</h2><a href="dashboard.html">Dashboard</a><a href="products.html">Products</a><a
+                href="users.html">Customers</a><a href="orders.html">Orders</a><a href="history.html">Purchase
+                History</a><button id="logoutBtn" class="link-button">Logout</button>
+        </aside>
+        <main class="main">
+            <h1>All Purchase History</h1>
+            <div id="message" class="message"></div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Qty</th>
+                            <th>Unit Price</th>
+                            <th>Line Total</th>
+                            <th>Order Total</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="../JS/api.js"></script>
+    <script src="../JS/history.js"></script>
+</body>
+
+</html>

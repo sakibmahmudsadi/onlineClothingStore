@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+</head>
+
+<body>
+    <nav class="nav"><strong>G7CS Admin</strong>
+        <div><a href="dashboard.html">Dashboard</a><a href="products.html">Products</a><a
+                href="users.html">Customers</a><a href="orders.html">Orders</a><a href="purchase-history.html">Purchase
+                History</a><a href="../controller/LogoutController.php">Logout</a></div>
+    </nav>
+    <main class="container">
+        <h1>Dashboard</h1>
+        <div class="cards">
+            <div class="stat"><span>Total Products</span><b id="products">0</b></div>
+            <div class="stat"><span>Total Customers</span><b id="customers">0</b></div>
+            <div class="stat"><span>Total Orders</span><b id="orders">0</b></div>
+            <div class="stat"><span>Pending Orders</span><b id="pending">0</b></div>
+        </div>
+    </main>
+    <script src="../JS/admin.js"></script>
+</body>
+
+</html>

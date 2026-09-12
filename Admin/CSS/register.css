@@ -1,0 +1,29 @@
+/* Extends admin.css - register-page specific tweaks */
+
+.register-card {
+    max-width: 420px;
+}
+
+.register-card .message.error {
+    color: #c0392b;
+}
+
+.register-card .message.success {
+    color: #1e8449;
+}
+
+.switch-link {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.switch-link a {
+    color: #2d6cdf;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-link a:hover {
+    text-decoration: underline;
+}

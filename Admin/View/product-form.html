@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product</title>
+<link rel="stylesheet" href="../CSS/admin.css">
+</head>
+<body data-admin-page>
+<div class="layout">
+<aside class="sidebar">
+<h2>G7CS</h2>
+<a href="dashboard.html">Dashboard</a>
+<a href="products.html">Products</a>
+<a href="users.html">Customers</a>
+<a href="orders.html">Orders</a>
+<a href="history.html">Purchase History</a>
+<button id="logoutBtn" class="link-button">Logout</button>
+</aside>
+<main class="main">
+<h1 id="formTitle">Add Product</h1>
+<div id="message" class="message"></div>
+<form id="productForm" enctype="multipart/form-data">
+<input type="hidden" name="id" id="id">
+<label>Product Name *</label>
+<input name="name" id="name" maxlength="100" required>
+<label>Description</label>
+<textarea name="description" id="description" rows="5"></textarea>
+<label>Size *</label>
+<input name="size" id="size" maxlength="20" placeholder="M,L,XL,XXL" required>
+<label>Price *</label>
+<input name="price" id="price" type="number" min="0.01" step="0.01" required>
+<label>Stock *</label>
+<input name="quantity" id="quantity" type="number" min="0" step="1" required>
+<label>Category *</label>
+<select name="category" id="category" required>
+<option value="">Select category</option>
+<option value="men">Men</option>
+<option value="woman">Woman</option>
+<option value="child">Child</option>
+</select>
+<label>Product Image *</label>
+<input name="image" id="image" type="file" accept=".jpg,.jpeg,.png,image/jpeg,image/png">
+<small>JPEG/PNG, maximum 2MB. On edit, image is optional.</small>
+<button type="submit">Save Product</button>
+<a class="button secondary" href="products.html">Cancel</a>
+</form>
+</main>
+</div>
+<script src="../JS/api.js"></script>
+<script src="../JS/product-form.js"></script>
+</body>
+</html>
