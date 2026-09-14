@@ -47,7 +47,14 @@ else{
 
         <form onsubmit="myajax(); return false;">
 
-            <input type="text" name="search" id="search">
+            <input type="text" name="search" id="search" placeholder="Search...">
+
+            <select id="category" onchange="myajax();">
+                <option value="">All</option>
+                <option value="men">Men</option>
+                <option value="woman">Women</option>
+                <option value="child">Kids</option>
+            </select>
 
             <input type="submit" value="Search">
 
@@ -58,7 +65,7 @@ else{
     <div>
 
         <a href="cart.php">
-            (<?php echo $cartCount ?>) Cart
+            (<span id="cartCount"><?php echo $cartCount ?></span>) Cart
         </a>
 
     </div>

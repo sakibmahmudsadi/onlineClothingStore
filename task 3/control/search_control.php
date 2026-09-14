@@ -7,9 +7,10 @@ $productModel = new productModel();
 if (isset($_GET["search"])) {
 
     $search = $_GET["search"];
+    $category = $_GET["category"] ?? "";
 
-    if ($search != "") {
-        $products = $productModel->searchProduct($search);
+    if ($search != "" || $category != "") {
+        $products = $productModel->searchProductWithCategory($search, $category);
     }
     else {
         $products = $productModel->allProduct();

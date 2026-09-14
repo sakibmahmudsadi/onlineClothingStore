@@ -8,7 +8,8 @@ $productModel = new productModel();
 
 if(isset($_POST['buy'])){
 
-    unset($_SESSION['cart']);
+    header("Location: ../customer/view/checkout.php");
+    exit;
 
 }
 

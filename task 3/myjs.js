@@ -1,6 +1,8 @@
 function myajax(){
 
     var data = document.getElementById("search").value;
+    var catElem = document.getElementById("category");
+    var category = catElem ? catElem.value : "";
 
     var xttp = new XMLHttpRequest();
 
@@ -19,7 +21,7 @@ function myajax(){
     xttp.open(
         "GET",
         "../control/search_control.php?search=" +
-        data,
+        encodeURIComponent(data) + "&category=" + encodeURIComponent(category),
         true
     );
 
@@ -36,6 +38,13 @@ function addCartAjax(form){
 
     var size = form.elements["size"].value;
 
+    var maxStock = parseInt(form.elements["quantity"].getAttribute("max") || 9999);
+
+    if(parseInt(quantity) > maxStock){
+        alert("Only " + maxStock + " items available in stock!");
+        return;
+    }
+
 
     var xttp = new XMLHttpRequest();
 
@@ -46,6 +55,11 @@ function addCartAjax(form){
             console.log(this.responseText);
 
             alert(this.responseText);
+
+            var badge = document.getElementById("cartCount");
+            if(badge){
+                badge.innerText = parseInt(badge.innerText) + 1;
+            }
         }
 
     };
